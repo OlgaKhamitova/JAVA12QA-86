@@ -22,11 +22,11 @@ public class FilmManager {
         films = temporary;
     }
 
-    public Film[] getAllFilms() {
+    public Film[] findAll() {
         return films;
     }
 
-    public Film[] getAddedFilms() {
+    public Film[] findLast() {
         Film[] addition = new Film[Math.min(resultLength, films.length)];
         for (int index = 0; index < resultLength && index + 1 <= films.length; index++) {
             addition[index] = films[films.length - 1 - index];
